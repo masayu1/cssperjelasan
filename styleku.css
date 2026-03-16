@@ -1,0 +1,522 @@
+/* =========================
+   GLOBAL
+========================= */
+
+body{
+    margin:0; /* menghilangkan jarak default dari browser */
+    font-family: 'Segoe UI', sans-serif; /* menentukan jenis font yang digunakan di website */
+    background:#fff6f0; /* warna background halaman */
+    color:#4b2c39; /* warna teks utama */
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    display:flex; /* membuat isi navbar sejajar horizontal */
+    justify-content:space-between; /* memberi jarak antara bagian kiri dan kanan */
+    align-items:center; /* membuat elemen berada di tengah secara vertikal */
+    padding:15px 60px; /* jarak dalam navbar */
+    position:fixed; /* navbar tetap di atas saat halaman di scroll */
+    top:0; /* posisi paling atas */
+    left:0;
+    right:0;
+    background:#ffe4ec; /* warna background navbar */
+    box-shadow:0 2px 10px rgba(0,0,0,0.1); /* memberi efek bayangan */
+    z-index:10; /* memastikan navbar berada di atas elemen lain */
+}
+
+.navbar-logo{
+    font-size:1.4rem; /* ukuran tulisan logo */
+    font-weight:bold; /* membuat tulisan tebal */
+    color:#d86a9a; /* warna teks logo */
+}
+
+.heading-links{
+    display:flex; /* membuat menu navbar horizontal */
+    list-style:none; /* menghilangkan bullet list */
+    gap:40px; /* jarak antar menu */
+}
+
+.heading-links a{
+    text-decoration:none; /* menghilangkan garis bawah link */
+    color:#7a4055; /* warna teks menu */
+    font-weight:500; /* ketebalan teks */
+}
+
+.heading-links a:hover{
+    color:#d86a9a; /* warna teks berubah saat mouse diarahkan */
+}
+
+.button-hire{
+    background:#f8b6cc; /* warna background tombol */
+    padding:8px 20px; /* ukuran dalam tombol */
+    border-radius:30px; /* membuat tombol oval */
+    color:white; /* warna teks */
+    text-decoration:none; /* menghilangkan garis bawah */
+    font-weight:bold; /* teks tebal */
+}
+
+.button-hire:hover{
+    background:#d86a9a; /* warna tombol berubah saat hover */
+}
+
+/* =========================
+   HERO / PROFILE
+========================= */
+
+.body-1{
+    padding-top:120px; /* memberi jarak dari navbar */
+    min-height:100vh; /* tinggi minimal satu layar penuh */
+    display:flex; /* menggunakan flexbox */
+    align-items:center; /* posisi elemen vertikal di tengah */
+    justify-content:center; /* posisi elemen horizontal di tengah */
+}
+
+.profil{
+    max-width:1000px; /* lebar maksimal area profil */
+    display:flex; /* membuat layout horizontal */
+    gap:40px; /* jarak antar elemen */
+    align-items:center; /* menyelaraskan elemen di tengah */
+}
+
+.profil-img{
+    width:200px; /* lebar foto profil */
+    height:200px; /* tinggi foto profil */
+    border-radius:50%; /* membuat foto berbentuk bulat */
+    object-fit:cover; /* gambar menyesuaikan area */
+    border:6px solid #ffd6e6; /* garis border foto */
+}
+
+.body-title{
+    font-size:48px; /* ukuran teks nama */
+    color:#d86a9a; /* warna teks */
+}
+
+.web-dev{
+    font-size:26px; /* ukuran teks profesi */
+    color:#7a4055; /* warna teks */
+}
+
+.body-desc{
+    font-size:18px; /* ukuran teks deskripsi */
+    margin-top:10px; /* jarak dari atas */
+}
+
+.highlight{
+    color:#ff7fb3; /* memberi warna khusus pada teks tertentu */
+}
+
+/* BUTTON */
+
+.button-portfolio,
+.button-contact{
+    border:2px solid #ff9fc7; /* garis border tombol */
+    padding:10px 22px; /* ukuran tombol */
+    border-radius:8px; /* sudut tombol membulat */
+    text-decoration:none; /* menghilangkan garis bawah link */
+    color:#7a4055; /* warna teks */
+    margin-right:10px; /* jarak antar tombol */
+}
+
+.button-portfolio:hover,
+.button-contact:hover{
+    background:#ff9fc7; /* warna tombol berubah saat hover */
+    color:white; /* warna teks berubah menjadi putih */
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-section{
+    padding:80px 8%; /* jarak dalam section */
+    background:#fff1f6; /* warna background section */
+    text-align:center; /* teks berada di tengah */
+}
+
+.section-title{
+    font-size:40px; /* ukuran judul section */
+    color:#d86a9a; /* warna teks judul */
+}
+
+.skills-desc{
+    margin-bottom:40px; /* jarak bawah */
+}
+
+.skills-grid{
+    display:grid; /* menggunakan grid layout */
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); /* membuat kolom responsif */
+    gap:20px; /* jarak antar card */
+}
+
+.skills-card{
+    background:white; /* background card */
+    padding:25px; /* jarak dalam card */
+    border-radius:15px; /* sudut card membulat */
+    box-shadow:0 5px 15px rgba(0,0,0,0.08); /* efek bayangan */
+}
+
+.skills-card:hover{
+    transform:translateY(-5px); /* card sedikit naik saat hover */
+}
+
+.icon{
+    width:80px; /* ukuran icon */
+}
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.port-sec{
+    padding:80px 20px; /* jarak dalam section */
+    background:linear-gradient(#fff6f0,#ffd9e8); /* background gradasi */
+    text-align:center; /* teks berada di tengah */
+}
+
+.port-title{
+    font-size:40px; /* ukuran judul */
+    color:#d86a9a; /* warna teks */
+}
+
+.port-desc{
+    margin-bottom:40px; /* jarak bawah */
+}
+
+.card-grid{
+    display:grid; /* menggunakan grid */
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); /* kolom card responsif */
+    gap:20px; /* jarak antar card */
+}
+
+.card{
+    background:white; /* background card */
+    border-radius:15px; /* sudut card membulat */
+    overflow:hidden; /* menyembunyikan bagian gambar yang keluar */
+    box-shadow:0 5px 20px rgba(0,0,0,0.1); /* bayangan card */
+}
+
+.card-banner img{
+    width:100%; /* gambar memenuhi card */
+    height:180px; /* tinggi gambar */
+    object-fit:cover; /* gambar menyesuaikan ukuran */
+}
+
+.card-body{
+    padding:20px; /* jarak dalam card */
+}
+
+.card-title{
+    font-size:20px; /* ukuran judul card */
+    color:#d86a9a; /* warna teks */
+}
+
+.card-text{
+    font-size:14px; /* ukuran teks deskripsi */
+}
+
+.tag-item{
+    background:#ffd9e8; /* warna background tag */
+    padding:4px 10px; /* ukuran tag */
+    border-radius:20px; /* membuat tag berbentuk oval */
+    font-size:12px; /* ukuran teks tag */
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-sec{
+    padding:80px 8%; /* memberi jarak dalam section contact */
+    background:#ffeef4; /* warna background bagian contact */
+    text-align:center; /* membuat teks di tengah */
+}
+
+.contact-title{
+    font-size:38px; /* ukuran judul contact */
+    color:#d86a9a; /* warna teks judul */
+}
+
+.contact-box{
+    max-width:700px; /* lebar maksimal area form */
+    margin:auto; /* membuat posisi form berada di tengah */
+}
+
+.bagian-form input,
+.bagian-form textarea{
+    width:100%; /* input memenuhi lebar container */
+    padding:12px; /* jarak dalam input */
+    border-radius:8px; /* membuat sudut input membulat */
+    border:1px solid #ffc4da; /* warna garis input */
+}
+
+.button-submit{
+    width:100%; /* tombol memenuhi lebar */
+    padding:12px; /* ukuran dalam tombol */
+    margin-top:10px; /* jarak dari elemen atas */
+    background:#f8b6cc; /* warna background tombol */
+    border:none; /* menghilangkan garis border */
+    border-radius:8px; /* sudut tombol membulat */
+    color:white; /* warna teks tombol */
+    font-weight:bold; /* membuat teks tombol tebal */
+}
+
+.button-submit:hover{
+    background:#d86a9a; /* warna tombol berubah saat mouse diarahkan */
+}
+
+/* =========================
+   SOCIAL ICON
+========================= */
+
+.under-box{
+    display:flex; /* menggunakan flexbox */
+    justify-content:center; /* icon berada di tengah */
+    gap:30px; /* jarak antar icon */
+    margin-top:30px; /* jarak dari atas */
+}
+
+.contact-icon{
+    text-decoration:none; /* menghilangkan garis bawah link */
+    color:#7a4055; /* warna icon */
+}
+
+.contact-icon i{
+    font-size:30px; /* ukuran icon sosial media */
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#ffd9e8; /* warna background footer */
+    padding:30px; /* jarak dalam footer */
+    text-align:center; /* teks di tengah */
+}
+
+.footer-copy{
+    color:#7a4055; /* warna teks copyright */
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){ /* aturan CSS jika layar ≤ 768px (tablet/HP) */
+
+.profil{
+flex-direction:column; /* profil berubah menjadi vertikal */
+text-align:center; /* teks berada di tengah */
+}
+
+.body-title{
+font-size:32px; /* ukuran judul diperkecil untuk layar kecil */
+}
+
+.heading-links{
+display:none; /* menu navbar disembunyikan di layar kecil */
+}
+
+}
+
+/* Tombol dark mode */
+.dark-btn {
+  padding: 8px 16px; /* ukuran dalam tombol */
+  border: 2px solid #333; /* garis border tombol */
+  border-radius: 20px; /* membuat tombol berbentuk oval */
+  background: transparent; /* background transparan */
+  cursor: pointer; /* kursor berubah menjadi tangan */
+  font-size: 14px; /* ukuran teks tombol */
+  transition: all 0.3s ease; /* animasi perubahan halus */
+}
+
+/* Gaya saat dark mode aktif — diapply ke <body> */
+.dark-mode {
+  background-color: #1a1a2e !important; /* background halaman berubah gelap */
+  color: #e0e0e0 !important; /* warna teks berubah menjadi terang */
+}
+
+.dark-mode .dark-btn {
+  border-color: #e0e0e0; /* warna border tombol berubah saat dark mode */
+  color: #e0e0e0; /* warna teks tombol berubah */
+}
+
+/* Transisi halus untuk semua elemen saat mode berubah */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.counter-section {
+  text-align: center; /* membuat semua teks di bagian counter berada di tengah */
+  padding: 60px 20px; /* memberi jarak dalam section: 60px atas bawah, 20px kiri kanan */
+}
+
+.counter-container {
+  display: flex; /* membuat elemen di dalamnya sejajar horizontal */
+  align-items: center; /* membuat elemen berada di tengah secara vertikal */
+  justify-content: center; /* membuat elemen berada di tengah secara horizontal */
+  gap: 24px; /* jarak antar elemen di dalam container */
+  margin: 24px 0; /* jarak luar atas dan bawah */
+}
+
+#angka-counter {
+  font-size: 72px; /* ukuran angka counter sangat besar */
+  font-weight: bold; /* membuat angka menjadi tebal */
+  color: #2E74B5; /* warna angka biru */
+  min-width: 100px; /* lebar minimum agar angka tidak berubah ukuran saat berubah */
+}
+
+.counter-btn {
+  width: 56px; /* lebar tombol */
+  height: 56px; /* tinggi tombol */
+  border-radius: 50%; /* membuat tombol berbentuk lingkaran */
+  border: 2px solid #2E74B5; /* garis tepi tombol berwarna biru */
+  background: white; /* warna background tombol */
+  font-size: 28px; /* ukuran simbol + dan - */
+  cursor: pointer; /* mengubah kursor menjadi tangan saat diarahkan */
+  color: #2E74B5; /* warna teks tombol */
+}
+
+.counter-btn:hover {
+  background: #2E74B5; /* warna tombol berubah saat mouse diarahkan */
+  color: white; /* warna teks berubah menjadi putih */
+}
+
+.form-section { 
+  padding: 60px 20px; /* jarak dalam section form */
+  max-width: 500px; /* lebar maksimal form */
+  margin: 0 auto; /* membuat form berada di tengah */
+}
+
+.form-container { 
+  display: flex; /* menggunakan flexbox */
+  flex-direction: column; /* elemen disusun ke bawah */
+  gap: 12px; /* jarak antar input */
+}
+
+.form-container input,
+.form-container textarea {
+  padding: 12px 16px; /* jarak dalam kotak input */
+  border: 2px solid #ddd; /* garis tepi input */
+  border-radius: 8px; /* sudut input membulat */
+  font-size: 16px; /* ukuran teks input */
+  font-family: inherit; /* menggunakan font yang sama dengan body */
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  outline: none; /* menghilangkan garis focus bawaan browser */
+  border-color: #2E74B5; /* border berubah warna biru saat diklik */
+}
+
+#btn-kirim {
+  padding: 14px; /* ukuran dalam tombol */
+  background: #2E74B5; /* warna tombol kirim */
+  color: white; /* warna teks tombol */
+  border: none; /* menghilangkan garis border */
+  border-radius: 8px; /* sudut tombol membulat */
+  font-size: 16px; /* ukuran teks tombol */
+  cursor: pointer; /* kursor berubah menjadi tangan */
+}
+
+
+
+#btn-kirim:hover { 
+  background: #1F4E79; /* warna tombol berubah lebih gelap saat diarahkan */
+}
+
+.feedback { 
+  padding: 12px 16px; /* jarak dalam kotak pesan */
+  border-radius: 8px; /* sudut kotak membulat */
+  font-size: 14px; /* ukuran teks pesan */
+}
+
+.feedback.error { 
+  background: #FEE2E2; /* background merah muda untuk pesan error */
+  color: #DC2626; /* warna teks merah */
+  border: 1px solid #FECACA; /* garis border merah muda */
+}
+
+.feedback.success { 
+  background: #DCFCE7; /* background hijau muda untuk pesan sukses */
+  color: #16A34A; /* warna teks hijau */
+  border: 1px solid #BBF7D0; /* border hijau muda */
+}
+
+.hidden { 
+  display: none; /* menyembunyikan elemen dari tampilan */
+}
+
+/* =========================
+   PERBAIKAN WARNA DARK MODE
+========================= */
+
+/* background utama */
+.dark-mode{
+  background:#140a10 !important; /* mengubah background halaman menjadi gelap saat dark mode aktif */
+  color:#ffd6e6 !important; /* mengubah warna teks utama menjadi terang */
+}
+
+/* navbar */
+.dark-mode .navbar{
+  background:#1f0f17; /* mengubah warna background navbar saat dark mode */
+}
+
+/* teks judul */
+.dark-mode .section-title,
+.dark-mode .port-title,
+.dark-mode .contact-title,
+.dark-mode .body-title{
+  color:#FF6FAF; /* mengubah warna semua judul menjadi pink terang */
+}
+
+/* teks biasa */
+.dark-mode .body-desc,
+.dark-mode .web-dev,
+.dark-mode .port-desc,
+.dark-mode .skills-desc{
+  color:#f3d6e4; /* mengubah warna teks deskripsi agar lebih terang di background gelap */
+}
+
+/* card */
+.dark-mode .skills-card,
+.dark-mode .card{
+  background:#24121b; /* mengubah background card menjadi gelap */
+  color:#ffd6e6; /* warna teks di card menjadi terang */
+}
+
+/* tag portfolio */
+.dark-mode .tag-item{
+  background:#ff4da6; /* background tag menjadi pink terang */
+  color:white; /* warna teks tag menjadi putih */
+}
+
+/* form */
+.dark-mode .bagian-form input,
+.dark-mode .bagian-form textarea{
+  background:#24121b; /* background input form menjadi gelap */
+  color:#ffd6e6; /* warna teks input menjadi terang */
+  border:1px solid #ff6faf; /* border input berubah menjadi pink */
+}
+
+/* tombol */
+.dark-mode .button-submit{
+  background:#FF4DA6; /* warna tombol submit menjadi pink */
+}
+
+.dark-mode .button-submit:hover{
+  background:#E91E63; /* warna tombol berubah lebih gelap saat diarahkan mouse */
+}
+
+/* footer */
+.dark-mode .footer{
+  background:#1f0f17; /* background footer berubah menjadi gelap */
+}
+
+/* icon */
+.dark-mode .contact-icon{
+  color:#ffd6e6; /* warna icon sosial media menjadi terang */
+}
